@@ -23,6 +23,20 @@
     </script>
     <script type="text/x-mathjax-config">
          MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </head>
 <body>
@@ -56,19 +70,158 @@
             <h3>My background.</h3>
             <ul>
                 <li class="fragment">Applied Physics/Mathematics (college).</li>
-                <li class="fragment">Mathematics (grad-school).</li>
+                <li class="fragment">Mathematics, combinatorics on words and mathematical logic
+                    (grad-school).
+                </li>
                 <li class="fragment">Java developer (work).</li>
                 <li class="fragment">Dev-ops developer (work).</li>
             </ul>
         </section>
+
         <section class="fragmented">
             <h3>Where was I in Jan 2016?</h3>
             <ul>
-                <li class="fragment">Capital One (still my day job), dev-ops for
+                <li class="fragment">Capital One (my day job then and now),
+                    dev-ops for
                     the Credit Card accounts website.
                 </li>
                 <li class="fragment">No open source work at all.</li>
             </ul>
+        </section>
+
+        <section class="fragmented">
+            <h3>Why to contribute?</h3>
+            <p>Here are the reasons that crossed my mind:</p>
+            <ol>
+                <li class="fragment">Career advancement. (Your resume is
+                    github.com)
+                </li>
+                <li class="fragment">
+                    A friend at work started working on
+                    <a href="https://angularjs.org">angular.js</a>. (i.e.
+                    localized momentum).
+                </li>
+                <li class="fragment">Altruism. (Working for the improvement of
+                    society).
+                </li>
+                <li class="fragment">Help keep my mathematics sharp.</li>
+            </ol>
+        </section>
+
+        <section class="fragmented">
+            <h3>What to contribute to?</h3>
+            <p>Questions that I asked myself:</p>
+            <ul>
+                <li class="fragment">What type ofcode do I enjoy writing?
+                    (Directory structures, strings)
+                </li>
+                <li class="fragment">At what do I particularly excel?
+                    (mathematics, java, and dev-ops)
+                </li>
+                <li class="fragment">What open source compnents do I use on a
+                    regular basis?
+                </li>
+            </ul>
+            <p class="fragment">I tried git before commons.</p>
+        </section>
+
+        <section class="fragmented">
+            <h3>Figuring out how to get involved.</h3>
+            <p>Now that you have an idea what you want to do, how do you do
+                it?</p>
+            <ul>
+                <li class="fragment">Reading and more reading (of the project's
+                    website).
+                </li>
+                <li class="fragment">Website Link: "contributing,"
+                    "contributors," "community," ect.
+                </li>
+                <li class="fragment">Checkout the code, run unit tests.</li>
+                <li class="fragment">Find a small bug, or improve unit tests.
+                </li>
+            </ul>
+        </section>
+
+        <section class="fragmented">
+            <h3>Whom do I first contact with questions?</h3>
+            <ol>
+                <li class="fragment">Email list.</li>
+                <li class="fragment">Github contexts: <em>/commits/master</em> and
+                    <em>/graphs/contributors</em>
+                </li>
+                <li class="fragment">Github "blame" view on a specific file:
+                    <em>/blame/master/README.md</em>
+                </li>
+            </ol>
+        </section>
+
+        <section class="fragmented">
+            <h3>Making your first commits.</h3>
+            <ul>
+                <li class="fragment">Personally, I'm always excited to see anyone contribute.</li>
+                <li class="fragment">Getting used to a code base takes time, and helping others contribute
+                    makes your job easier.
+                </li>
+                <li class="fragment">Unit tests are like brushing your teeth, and use the code style around you</li>
+            </ul>
+        </section>
+
+        <section class="fragmented">
+            <h3>Staying involved.</h3>
+            <ul>
+                <li class="fragment">Participate in discussion.</li>
+                <li class="fragment">Find a single portion of the code base you can master.</li>
+                <li class="fragment">Ask senior members where the best place to help is.</li>
+                <li class="fragment">Volunteer for things others might not want to do, and do them.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Ok...enough. Let's look at some code.</h3>
+            <p>What I've been working on for the last few months in the Apache Commons Project.</p>
+            <p class="fragment">Anyone not familiar with the Apache Commons Project?</p>
+        </section>
+
+        <section>
+            <h3>Introducing <code>commons-text</code>.</h3>
+            <p><em>Goal</em>. Text processing algorithms out of standard java library scope.</p>
+        </section>
+
+        <section>
+            <h3>Currently.</h3>
+            <ul>
+                <li class="fragment">String Escaping (e.g. XML, CSV, JSON, ect.)</li>
+                <li class="fragment">String similarity and edit distance.</li>
+                <li class="fragment">A String diff tool based on the LCS Algorithm.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>String Similarity Example</h3>
+            <p>The Longest commons subsequence is a classical String similarity algorithm.</p>
+            <pre><code>LongestCommonSubsequence siml = new LongestCommonsSubsequence();
+siml.apply("abba","abab"); // 3
+siml.apply("frog", "fog"); // 3
+siml.apply("PENNSYLVANIA", "PENNCISYLVNIA") //11</code></pre>
+        </section>
+
+        <section>
+            <h3>LCS Edit Distance</h3>
+            <pre><code>LongestCommonSubsequenceDistance dist = new LongestCommonSubsequenceDistance();
+dist.apply("abba","abab"); // 2
+dist.apply("frog", "fog"); // 1
+dist.apply("PENNSYLVANIA", "PENNCISYLVNIA") // 3
+dist.apply("elephant", "hippo")// 11</code></pre>
+        </section>
+
+        <section>
+            <h3>Levenshtein Edit Distance</h3>
+            <p>Different algorithm same results.</p>
+            <pre><code>LevenshteinDistance dist = new LevenshteinDistance();
+dist.apply("abba","abab"); // 2
+dist.apply("frog", "fog"); // 1
+dist.apply("PENNSYLVANIA", "PENNCISYLVNIA") // 3
+dist.apply("elephant", "hippo")// 7</code></pre>
         </section>
     </div>
 </div>
