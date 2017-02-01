@@ -199,11 +199,18 @@
                 <li class="fragment">better instance methods</li>
                 <li class="fragment">not thread safe, not final</li>
             </ul>
-            <pre class="fragment"><code class="java">temp</code></pre>
+            <pre class="fragment"><code class="java">StrBuilder sb = new StrBuilder("Test");
+sb.readFrom(CharBuffer.wrap(" 123")); // "Test 123"
+sb = new StrBuilder("bb");
+sb.replaceAll("b", "xbx"); // "xbxxbx"
+sb = new StrBuilder("abc");
+sb.replace(0, 1, "aaa"); // "aaabc"
+</code></pre>
         </section>
 
         <section>
             <h3><code style="text-transform: none;">FormattableUtils</code></h3>
+            <!-- TODO: ============================================================================================= -->
             <ul>
                 <li class="fragment">Temp</li>
             </ul>
@@ -223,6 +230,7 @@
 
         <section>
             <h3><code style="text-transform: none;">StrTokenizer</code></h3>
+            <!-- TODO: ============================================================================================= -->
             <ul>
                 <li class="fragment">Temp</li>
             </ul>
@@ -273,6 +281,9 @@ dist.apply("elephant", "hippo"); // 7</code></pre>
 
         <section>
             <h3>Takeaways.</h3>
+            <ul>
+                <li class="fragment"></li>
+            </ul>
         </section>
 
         <section>
