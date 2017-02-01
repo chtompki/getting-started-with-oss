@@ -23,20 +23,6 @@
     </script>
     <script type="text/x-mathjax-config">
          MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 </head>
 <body>
@@ -184,12 +170,18 @@
 
         <section>
             <h3>Introducing <code>commons-text</code>.</h3>
-            <p><em>Goal</em>. Text processing algorithms out of standard java library scope.</p>
+            <p><em>Goal</em>. Text processing algorithms out of standard java library scope and promote
+                reuse across all of Apache's projects.</p>
         </section>
 
         <section>
             <h3>Currently.</h3>
             <ul>
+                <li class="fragment">Textier Utilities than Lang's StringUtils</li>
+                <ul class="fragment">
+                    <li><code>StrBuilder</code>, <code>FormattableUtils</code>, <code>StrSubstitutor</code>, and
+                        <code>StrTokenizer</code></li>
+                </ul>
                 <li class="fragment">String Escaping (e.g. XML, CSV, JSON, ect.)</li>
                 <li class="fragment">String similarity and edit distance.</li>
                 <li class="fragment">A String diff tool based on the LCS Algorithm.</li>
@@ -197,9 +189,34 @@
         </section>
 
         <section>
-            <h3>String Similarity Example</h3>
+            <h2>Examples.</h2>
+        </section>
+
+        <section>
+            <h3><code style="text-transform: none;">StrBuilder</code></h3>
+        </section>
+
+        <section>
+            <h3><code style="text-transform: none;">FormattableUtils</code></h3>
+        </section>
+
+        <section>
+            <h3><code style="text-transform: none;">StrSubstitutor</code></h3>
+        </section>
+
+        <section>
+            <h3><code style="text-transform: none;">StrTokenizer</code></h3>
+        </section>
+
+        <section>
+            <h3><code style="text-transform: none;">StringEscapeUtils</code></h3>
+        </section>
+
+        <section>
+            <h3><code style="text-transform: none;">LongestCommonSubsequence</code></h3>
             <p>The Longest commons subsequence is a classical String similarity algorithm.</p>
-            <pre><code>LongestCommonSubsequence siml = new LongestCommonsSubsequence();
+            <pre><code>LongestCommonSubsequence siml =
+        new LongestCommonsSubsequence();
 siml.apply("abba","abab"); // 3
 siml.apply("frog", "fog"); // 3
 siml.apply("PENNSYLVANIA", "PENNCISYLVNIA"); // 11
@@ -207,8 +224,9 @@ smil.apply("elephant", "hippo"); // 1</code></pre>
         </section>
 
         <section>
-            <h3>LCS Edit Distance</h3>
-            <pre><code>LongestCommonSubsequenceDistance dist = new LongestCommonSubsequenceDistance();
+            <h3><code style="text-transform: none; font-size:90%;">LongestCommonSubsequenceDistance</code></h3>
+            <pre><code>LongestCommonSubsequenceDistance dist =
+        new LongestCommonSubsequenceDistance();
 dist.apply("abba","abab"); // 2
 dist.apply("frog", "fog"); // 1
 dist.apply("PENNSYLVANIA", "PENNCISYLVNIA"); // 3
@@ -216,13 +234,17 @@ dist.apply("elephant", "hippo"); // 11</code></pre>
         </section>
 
         <section>
-            <h3>Levenshtein Edit Distance</h3>
+            <h3><code style="text-transform: none;">LevenshteinDistance</code></h3>
             <p>Different algorithm same results.</p>
             <pre><code>LevenshteinDistance dist = new LevenshteinDistance();
 dist.apply("abba","abab"); // 2
 dist.apply("frog", "fog"); // 1
 dist.apply("PENNSYLVANIA", "PENNCISYLVNIA"); // 3
 dist.apply("elephant", "hippo"); // 7</code></pre>
+        </section>
+
+        <section>
+            <h3>Takeaways.</h3>
         </section>
     </div>
 </div>
