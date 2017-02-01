@@ -194,28 +194,56 @@
 
         <section>
             <h3><code style="text-transform: none;">StrBuilder</code></h3>
+            <ul>
+                <li class="fragment">an alternative to <code>java.lang.StringBuilder</code></li>
+                <li class="fragment">better instance methods</li>
+                <li class="fragment">not thread safe, not final</li>
+            </ul>
+            <pre class="fragment"><code class="java">temp</code></pre>
         </section>
 
         <section>
             <h3><code style="text-transform: none;">FormattableUtils</code></h3>
+            <ul>
+                <li class="fragment">Temp</li>
+            </ul>
+            <pre class="fragment"><code class="java">temp</code></pre>
         </section>
 
         <section>
             <h3><code style="text-transform: none;">StrSubstitutor</code></h3>
+            <ul>
+                <li class="fragment">provides a convenient way to do string substitutions</li>
+                <li class="fragment">think of it as a template engine in one class</li>
+            </ul>
+            <pre class="fragment"><code class="java">String replaced = StrSubstitutor.replaceSystemProperties(
+    "You are running with java.version = ${java.version}" +
+    " and os.name = ${os.name}.");</code></pre>
         </section>
 
         <section>
             <h3><code style="text-transform: none;">StrTokenizer</code></h3>
+            <ul>
+                <li class="fragment">Temp</li>
+            </ul>
+            <pre class="fragment"><code class="java">temp</code></pre>
         </section>
 
         <section>
             <h3><code style="text-transform: none;">StringEscapeUtils</code></h3>
+            <ul>
+                <li class="fragment">provides a convenient way to do escaping</li>
+            </ul>
+            <pre class="fragment"><code class="java">StringEscapeUtils.escapeJson("He didn't say, \"stop!\"");
+// "He didn\\'t say, \\\"stop!\\\""
+StringEscapeUtils.escapeJava("\\\b\t\r");
+// "\\\\\\b\\t\\r" </code></pre>
         </section>
 
         <section>
             <h3><code style="text-transform: none;">LongestCommonSubsequence</code></h3>
             <p>The Longest commons subsequence is a classical String similarity algorithm.</p>
-            <pre><code>LongestCommonSubsequence siml =
+            <pre><code class="java">LongestCommonSubsequence siml =
         new LongestCommonsSubsequence();
 siml.apply("abba","abab"); // 3
 siml.apply("frog", "fog"); // 3
@@ -225,7 +253,7 @@ smil.apply("elephant", "hippo"); // 1</code></pre>
 
         <section>
             <h3><code style="text-transform: none; font-size:90%;">LongestCommonSubsequenceDistance</code></h3>
-            <pre><code>LongestCommonSubsequenceDistance dist =
+            <pre><code class="java">LongestCommonSubsequenceDistance dist =
         new LongestCommonSubsequenceDistance();
 dist.apply("abba","abab"); // 2
 dist.apply("frog", "fog"); // 1
@@ -235,8 +263,8 @@ dist.apply("elephant", "hippo"); // 11</code></pre>
 
         <section>
             <h3><code style="text-transform: none;">LevenshteinDistance</code></h3>
-            <p>Different algorithm same results.</p>
-            <pre><code>LevenshteinDistance dist = new LevenshteinDistance();
+            <p>Different algorithm with almost the same results.</p>
+            <pre><code class="java">LevenshteinDistance dist = new LevenshteinDistance();
 dist.apply("abba","abab"); // 2
 dist.apply("frog", "fog"); // 1
 dist.apply("PENNSYLVANIA", "PENNCISYLVNIA"); // 3
@@ -245,6 +273,10 @@ dist.apply("elephant", "hippo"); // 7</code></pre>
 
         <section>
             <h3>Takeaways.</h3>
+        </section>
+
+        <section>
+            <h2>Questions?</h2>
         </section>
     </div>
 </div>
