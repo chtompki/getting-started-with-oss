@@ -23,6 +23,10 @@
     </script>
     <script type="text/x-mathjax-config">
          MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+
+
+
+
     </script>
 </head>
 <body>
@@ -54,6 +58,7 @@
 
         <section class="fragmented">
             <h3>My background.</h3>
+            <p><em>Don't know if I want this slide.</em></p>
             <ul>
                 <li class="fragment">Applied Physics/Mathematics (college).</li>
                 <li class="fragment">Mathematics, combinatorics on words and mathematical logic
@@ -210,11 +215,20 @@ sb.replace(0, 1, "aaa"); // "aaabc"
 
         <section>
             <h3><code style="text-transform: none;">FormattableUtils</code></h3>
-            <!-- TODO: ============================================================================================= -->
             <ul>
-                <li class="fragment">Temp</li>
+                <li class="fragment">provides basic control over formatting when using a
+                    <code>java.util.Formatter</code></li>
+                <li class="fragment">primarily concerned with numeric precision and padding</li>
+                <li class="fragment">no generalized alternative forms</li>
             </ul>
-            <pre class="fragment"><code class="java">temp</code></pre>
+            <pre class="fragment"><code class="java">FormattableUtils.append("foo",
+        new Formatter(),
+        FormattableFlags.LEFT_JUSTIFY,
+        6, -1, '*').toString(); // "foo***"
+FormattableUtils.append("foo",
+        new Formatter(),
+        FormattableFlags.LEFT_JUSTIFY,
+        6, -1,).toString(); // "foo   "</code></pre>
         </section>
 
         <section>
@@ -230,11 +244,28 @@ sb.replace(0, 1, "aaa"); // "aaabc"
 
         <section>
             <h3><code style="text-transform: none;">StrTokenizer</code></h3>
-            <!-- TODO: ============================================================================================= -->
             <ul>
-                <li class="fragment">Temp</li>
+                <li class="fragment">Tokenizes a string based based on delimiters (separators) and supporting quoting
+                    and ignored character concepts
+                </li>
+                <li class="fragment">aims to do a similar job to <code>java.util.StringTokenizer</code></li>
+                <li class="fragment"> offers much more control and flexibility including implementing the
+                    <code>java.util.ListIterator</code> interface
+                </li>
             </ul>
-            <pre class="fragment"><code class="java">temp</code></pre>
+        </section>
+
+        <section>
+            <h3><code style="text-transform: none;">StrTokenizer</code></h3>
+            <pre><code class="java">final String input = "a;b;c;\"d;\"\"e\";f; ; ;  ";
+final StrTokenizer tok = new StrTokenizer(input);
+tok.setDelimiterChar(';');
+tok.setQuoteChar('"');
+//Matches the String trim() whitespace characters.
+tok.setIgnoredMatcher(StrMatcher.trimMatcher());
+tok.setIgnoreEmptyTokens(false);
+final String tokens[] = tok.getTokenArray();
+// String[]{"a", "b", "c", "d;\"e", "f", "", "", "",};</code></pre>
         </section>
 
         <section>
@@ -280,10 +311,17 @@ dist.apply("elephant", "hippo"); // 7</code></pre>
         </section>
 
         <section>
-            <h3>Takeaways.</h3>
-            <ul>
-                <li class="fragment"></li>
-            </ul>
+            <h3>What I've learned.</h3>
+            <ol>
+                <li class="fragment">I quite enjoy writing algorithms.</li>
+                <li class="fragment">The open source contribution and release processes are quite valuable.
+                    <ul>
+                        <li class="fragment">I've begun using these at my day job.</li>
+                    </ul>
+                </li>
+                <li class="fragment">The community tends to be encouraging if you are willing to put in effort.</li>
+                <li class="fragment">All employers value seeing open source contributions.</li>
+            </ol>
         </section>
 
         <section>
