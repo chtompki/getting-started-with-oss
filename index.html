@@ -34,8 +34,7 @@
     <div class="slides">
         <section>
             <h1>Commons Text</h1>
-            <h4>From a user of Apache Commons to a release manager of a
-                new component in 9 months.</h4>
+            <h4>a library focused on algorithms working on strings</h4>
             <p>
                 <small>Created by
                     <a href="https://github.com/chtompki">
@@ -68,114 +67,36 @@
             </ul>
         </section>
 
-        <section class="fragmented">
-            <h3>Where was I in Jan 2016?</h3>
-            <ul>
-                <li class="fragment">Capital One (my day job then and now),
-                    dev-ops for
-                    the Credit Card accounts website.
-                </li>
-                <li class="fragment">No open source work at all.</li>
-            </ul>
-        </section>
-
-        <section class="fragmented">
-            <h3>Why to contribute?</h3>
-            <p>Here are the reasons that crossed my mind:</p>
-            <ol>
-                <li class="fragment">Career advancement. (Your resume is
-                    github.com)
-                </li>
-                <li class="fragment">
-                    A friend at work started working on
-                    <a href="https://angularjs.org">angular.js</a>. (i.e.
-                    localized momentum).
-                </li>
-                <li class="fragment">Altruism. (Working for the improvement of
-                    society).
-                </li>
-                <li class="fragment">Help keep my mathematics sharp.</li>
-            </ol>
-        </section>
-
-        <section class="fragmented">
-            <h3>What to contribute to?</h3>
-            <p>Questions that I asked myself:</p>
-            <ul>
-                <li class="fragment">What type ofcode do I enjoy writing?
-                    (Directory structures, strings)
-                </li>
-                <li class="fragment">At what do I particularly excel?
-                    (mathematics, java, and dev-ops)
-                </li>
-                <li class="fragment">What open source compnents do I use on a
-                    regular basis?
-                </li>
-            </ul>
-            <p class="fragment">I tried git before commons.</p>
-        </section>
-
-        <section class="fragmented">
-            <h3>Figuring out how to get involved.</h3>
-            <p>Now that you have an idea what you want to do, how do you do
-                it?</p>
-            <ul>
-                <li class="fragment">Reading and more reading (of the project's
-                    website).
-                </li>
-                <li class="fragment">Website Link: "contributing,"
-                    "contributors," "community," ect.
-                </li>
-                <li class="fragment">Checkout the code, run unit tests.</li>
-                <li class="fragment">Find a small bug, or improve unit tests.
-                </li>
-            </ul>
-        </section>
-
-        <section class="fragmented">
-            <h3>Whom do I first contact with questions?</h3>
-            <ol>
-                <li class="fragment">Email list.</li>
-                <li class="fragment">Github contexts: <em>/commits/master</em> and
-                    <em>/graphs/contributors</em>
-                </li>
-                <li class="fragment">Github "blame" view on a specific file:
-                    <em>/blame/master/README.md</em>
-                </li>
-            </ol>
-        </section>
-
-        <section class="fragmented">
-            <h3>Making your first commits.</h3>
-            <ul>
-                <li class="fragment">Personally, I'm always excited to see anyone contribute.</li>
-                <li class="fragment">Getting used to a code base takes time, and helping others contribute
-                    makes your job easier.
-                </li>
-                <li class="fragment">Unit tests are like brushing your teeth, and use the code style around you</li>
-            </ul>
-        </section>
-
-        <section class="fragmented">
-            <h3>Staying involved.</h3>
-            <ul>
-                <li class="fragment">Participate in discussion.</li>
-                <li class="fragment">Find a single portion of the code base you can master.</li>
-                <li class="fragment">Ask senior members where the best place to help is.</li>
-                <li class="fragment">Volunteer for things others might not want to do, and do them.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>Ok...enough. Let's look at some code.</h3>
-            <p>What I've been working on for the last few months in the Apache Commons Project.</p>
-            <p class="fragment">Anyone not familiar with the Apache Commons Project?</p>
-        </section>
-
         <section>
             <h3>Introducing <code>commons-text</code>.</h3>
-            <p><em>Goal</em>. Text processing algorithms out of standard java library scope and promote
+            <br/>
+            <p class="fragment">
+                <em>Goal</em>. Text processing algorithms out of standard java library scope and promote
                 reuse across all of Apache's projects.</p>
+            <br />
+            <p class="fragment">
+                <em>Secondary goal.</em>Remove heavier text processing mechanics from <code>commons-lang</code>, so
+                <code>lang</code> remains a host of helper utilities for the java.lang API, useful for everyone writing
+                in Java.
+            </p>
+        </section>
+        
+        <section>
+            <h3>History</h3>
+            <ul>
+                <li class="fragment">
+                    Traction on appetite for a 
+                    <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a> began to form
+                    in October 2014 in <a href="https://issues.apache.org/jira/browse/LANG-591">LANG-591</a>.
+                </li>
+                <li class="fragment">
+                    <a href="http://kinoshita.eti.br/">Bruno Kinoshita</a> and <a href="http://www.benediktritter.de/">Benedikt Ritter</a>
+                    put together a proposal to create 
+                </li>
+                <li class="fragment">
+                    In November 2016, I started working [text] towards a 1.0 release. 
+                </li>
+            </ul>
         </section>
 
         <section>
@@ -190,10 +111,6 @@
                 <li class="fragment">String similarity and edit distance.</li>
                 <li class="fragment">A String diff tool based on the LCS Algorithm.</li>
             </ul>
-        </section>
-
-        <section>
-            <h2>Examples.</h2>
         </section>
 
         <section>
