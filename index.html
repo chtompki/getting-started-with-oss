@@ -69,16 +69,17 @@
 
         <section>
             <h3>Introducing <code>commons-text</code>.</h3>
-            <br/>
-            <p class="fragment">
-                <em>Goal</em>. Text processing algorithms out of standard java library scope and promote
-                reuse across all of Apache's projects.</p>
-            <br />
-            <p class="fragment">
-                <em>Secondary goal.</em>Remove heavier text processing mechanics from <code>commons-lang</code>, so
-                <code>lang</code> remains a host of helper utilities for the java.lang API, useful for everyone writing
-                in Java.
-            </p>
+            <ul>
+                <li class="fragment">
+                    <em>Goal</em>. Text processing algorithms out of standard java library scope and promote
+                    reuse across all of Apache's projects.</li>
+                
+                <li class="fragment">
+                    <em>Secondary goal.</em>Remove heavier text processing mechanics from <code>commons-lang</code>, so
+                    <code>lang</code> remains a host of helper utilities for the java.lang API, useful for everyone writing
+                    in Java.
+                </li>
+            </ul>
         </section>
         
         <section>
@@ -91,17 +92,17 @@
                 </li>
                 <li class="fragment">
                     <a href="http://kinoshita.eti.br/">Bruno Kinoshita</a> and <a href="http://www.benediktritter.de/">Benedikt Ritter</a>
-                    put together a proposal to create 
+                    put together a proposal to create <code>text</code> in the sandbox.
                 </li>
                 <li class="fragment">
-                    In November 2016, I started working <code>text</code> towards a 1.0 release, and by March 11, 2017 we had our 
-                    1.0.
+                    In November 2016, I started working <code>text</code> towards a 1.0 release, and by March 11, 2017 
+                    we had our 1.0.
                 </li>
             </ul>
         </section>
 
         <section>
-            <h3>Currently.</h3>
+            <h3>Current Layout.</h3>
             <ul>
                 <li class="fragment">Textier Utilities than Lang's StringUtils</li>
                 <ul class="fragment">
@@ -110,8 +111,11 @@
                 </ul>
                 <li class="fragment">String Escaping (e.g. XML, CSV, JSON, ect.)</li>
                 <li class="fragment">String similarity and edit distance.</li>
-                <li class="fragment">A String diff tool based on the LCS Algorithm.</li>
             </ul>
+        </section>
+        
+        <section>
+            <h2>From <code>lang</code></h2>
         </section>
 
         <section>
@@ -194,6 +198,10 @@ final String tokens[] = tok.getTokenArray();
 // "He didn\\'t say, \\\"stop!\\\""
 StringEscapeUtils.escapeJava("\\\b\t\r");
 // "\\\\\\b\\t\\r" </code></pre>
+        </section>
+        
+        <section>
+            <h2>New functionality, unique to <code>text</code></h2>
         </section>
 
         <section>
