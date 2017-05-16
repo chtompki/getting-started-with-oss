@@ -172,7 +172,7 @@ FormattableUtils.append("foo",
 
         <section>
             <h3><code style="text-transform: none;">StrTokenizer</code></h3>
-            <pre><code class="java">final String input = "a;b;c;\"d;\"\"e\";f; ; ;  ";
+            <pre><code class="java">final String input = "a;b;c;\"d;e\";f; ; ;  ";
 final StrTokenizer tok = new StrTokenizer(input);
 tok.setDelimiterChar(';');
 tok.setQuoteChar('"');
@@ -180,7 +180,7 @@ tok.setQuoteChar('"');
 tok.setIgnoredMatcher(StrMatcher.trimMatcher());
 tok.setIgnoreEmptyTokens(false);
 final String tokens[] = tok.getTokenArray();
-// String[]{"a", "b", "c", "d;\"e", "f", "", "", "",};</code></pre>
+// String[]{"a", "b", "c", "d;e", "f", "", "", "",};</code></pre>
         </section>
 
         <section>
