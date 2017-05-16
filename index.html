@@ -143,7 +143,7 @@ sb.replace(0, 1, "aaa"); // "aaabc"
 FormattableUtils.append("foo",
                         new Formatter(),
                         FormattableFlags.LEFT_JUSTIFY,
-                        6, -1,).toString(); // "foo   "</code></pre>
+                        6, -1).toString(); // "foo   "</code></pre>
         </section>
 
         <section>
@@ -159,7 +159,7 @@ String templateString = "The ${animal} jumped " +
                         "over the ${target}.";
 StrSubstitutor sub = new StrSubstitutor(valuesMap);
 String resolvedString = sub.replace(templateString);
-// "The quick brown fox jumped over the lazy dog"
+// "The quick brown fox jumped over the lazy dog."
 </code></pre>
         </section>
 
@@ -186,7 +186,7 @@ tok.setQuoteChar('"');
 tok.setIgnoredMatcher(StrMatcher.trimMatcher());
 tok.setIgnoreEmptyTokens(false);
 final String tokens[] = tok.getTokenArray();
-// String[]{"a", "b", "c", "d;e", "f", "", "", "",};</code></pre>
+// String[]{"a", "b", "c", "d;e", "f", "", "", ""};</code></pre>
         </section>
 
         <section>
