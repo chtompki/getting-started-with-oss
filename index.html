@@ -115,9 +115,9 @@
         <section>
             <h3><code style="text-transform: none;">StrBuilder</code></h3>
             <ul>
-                <li class="fragment">an alternative to <code>java.lang.StringBuilder</code></li>
-                <li class="fragment">better instance methods</li>
-                <li class="fragment">not thread safe, not final</li>
+                <li class="fragment">An alternative to <code>java.lang.StringBuilder</code></li>
+                <li class="fragment">Better instance methods</li>
+                <li class="fragment">Not thread safe, not final</li>
             </ul>
             <pre class="fragment"><code class="java">StrBuilder sb = new StrBuilder("Test");
 sb.readFrom(CharBuffer.wrap(" 123")); // "Test 123"
@@ -131,10 +131,10 @@ sb.replace(0, 1, "aaa"); // "aaabc"
         <section>
             <h3><code style="text-transform: none;">FormattableUtils</code></h3>
             <ul>
-                <li class="fragment">provides basic control over formatting when using a
+                <li class="fragment">Provides basic control over formatting when using a
                     <code>java.util.Formatter</code></li>
-                <li class="fragment">primarily concerned with numeric precision and padding</li>
-                <li class="fragment">no generalized alternative forms</li>
+                <li class="fragment">Primarily concerned with numeric precision and padding</li>
+                <li class="fragment">No generalized alternative forms</li>
             </ul>
             <pre class="fragment"><code class="java">FormattableUtils.append("foo",
         new Formatter(),
@@ -149,8 +149,8 @@ FormattableUtils.append("foo",
         <section>
             <h3><code style="text-transform: none;">StrSubstitutor</code></h3>
             <ul>
-                <li class="fragment">provides a convenient way to do string substitutions</li>
-                <li class="fragment">think of it as a template engine in one class</li>
+                <li class="fragment">Provides a convenient way to do string substitutions</li>
+                <li class="fragment">Think of it as a template engine in one class</li>
             </ul>
             <pre class="fragment"><code class="java">String replaced = StrSubstitutor.replaceSystemProperties(
     "You are running with java.version = ${java.version}" +
@@ -163,8 +163,8 @@ FormattableUtils.append("foo",
                 <li class="fragment">Tokenizes a string based based on delimiters (separators) and supporting quoting
                     and ignored character concepts
                 </li>
-                <li class="fragment">aims to do a similar job to <code>java.util.StringTokenizer</code></li>
-                <li class="fragment"> offers much more control and flexibility including implementing the
+                <li class="fragment">Aims to do a similar job to <code>java.util.StringTokenizer</code></li>
+                <li class="fragment">Offers much more control and flexibility including implementing the
                     <code>java.util.ListIterator</code> interface
                 </li>
             </ul>
@@ -186,7 +186,7 @@ final String tokens[] = tok.getTokenArray();
         <section>
             <h3><code style="text-transform: none;">StringEscapeUtils</code></h3>
             <ul>
-                <li class="fragment">provides a convenient way to do escaping</li>
+                <li class="fragment">Provides a convenient way to do escaping</li>
             </ul>
             <pre class="fragment"><code class="java">StringEscapeUtils.escapeJson("He didn't say, \"stop!\"");
 // "He didn\\'t say, \\\"stop!\\\""
