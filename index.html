@@ -152,9 +152,14 @@ FormattableUtils.append("foo",
                 <li class="fragment">Provides a convenient way to do string substitutions</li>
                 <li class="fragment">Think of it as a template engine in one class</li>
             </ul>
-            <pre class="fragment"><code class="java">String replaced = StrSubstitutor.replaceSystemProperties(
-    "You are running with java.version = ${java.version}" +
-    " and os.name = ${os.name}.");</code></pre>
+            <pre class="fragment"><code class="java"> Map valuesMap = HashMap();
+valuesMap.put("animal", "quick brown fox");
+valuesMap.put("target", "lazy dog");
+String templateString = "The ${animal} jumped over the ${target}.";
+StrSubstitutor sub = new StrSubstitutor(valuesMap);
+String resolvedString = sub.replace(templateString);
+// "The quick brown fox jumped over the lazy dog"
+</code></pre>
         </section>
 
         <section>
