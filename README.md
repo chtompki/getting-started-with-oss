@@ -46,3 +46,5 @@ ApacheCon 2017 commons-text presentation.
         </ul>
     </li>
 </ol>
+
+Then Talk about the examples...(As of 5/19/2017, the talk is only 30 mins....I need more examples).
