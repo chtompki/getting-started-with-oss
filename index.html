@@ -40,225 +40,212 @@
                 <small>Created by
                     <a href="https://github.com/chtompki">
                         Rob Tompkins (chtompki)</a></small><br/>
-                <small>Presentation Address: <a href="http://bit.ly/2rj9M29">
-                    http://bit.ly/2rj9M29</a></small>
+                <small>Presentation Address: <a href="someting">
+                    something</a></small>
             </p>
 
         </section>
 
         <section>
-            <h3>Who I am.</h3>
+        <h2>What is <a href="http://commons.apache.org">apache commons</a>?</h2>
+        <ul>
+            <li class="fragment">Common location for sharing code for Apache projects.</li>
+            <li class="fragment">Was jakarta commons (jakarta being the apache java project).</li>
+            <li class="fragment"><strong>Current mission:</strong> Provide a place for other ASF projects to
+                come together, collaborate and share
+                common code.</li>
+        </ul>
+    </section>
+
+        <section>
+            <h2>Does anyone not know what an open source project is?</h2>
+            <p class="fragment">
+                <strong>Def'n.</strong> In general, open source refers to any program whose source code
+                is made available for use or modification as users or other developers see fit.
+            </p>
+        </section>
+
+        <section>
+            <h2>What are the benefits of open source software?</h2>
             <ul>
-                <li class="fragment"><a href="mailto:chtompki@apache.org">chtompki@apache.org</a>
-                </li>
-                <li class="fragment">Apache Commons Committer</li>
-                <li class="fragment">Apache Commons Text Release Manager</li>
-                <li class="fragment">Software Developer (Java, DevOps)</li>
-                <li class="fragment">Mathematician/Logician (?, sure why not).</li>
+                <li class="fragment">Accommodation of a type of standardization.</li>
+                <li class="fragment">More eyes = fewer bugs.</li>
+                <li class="fragment">Long term support.</li>
             </ul>
         </section>
 
         <section>
-            <h3>Introducing <code style="text-transform: none;">commons-text</code>.</h3>
-            <ul>
-                <li class="fragment">
-                    <em>Goal</em>. Text processing algorithms out of standard java library scope and promote
-                    reuse across all of Apache's projects.</li>
-                
-                <li class="fragment">
-                    <em>Secondary goal.</em>
+            <h2>[Benedikt] Ritter's Law</h2>
+            <p class="fragment">
+                Everything that is not part of our domain/business logic or the crazy legacy
+                systems we need to integrate has already been developed by somebody
+                much smarter than us....
+            </p>
+            <p class="fragment">
+                Don't re-invent the wheel!
+            </p>
+        </section>
+
+        <section>
+            <h2>Why did I get involved?</h2>
+            <ol>
+                <li class="fragment">To keep my mathematics sharp(er).</li>
+                <li class="fragment">Career advancement?</li>
+                <li class="fragment">You're not constrained by timelines...you can get it right.</li>
+            </ol>
+        </section>
+
+        <section>
+            <section>
+                <h2>Ok, so what did you do to get involved?</h2>
+                <ol>
+                    <li class="fragment">Pick a subject that you're passionate about.</li>
+                    <li class="fragment">If it's on git check the stats page to see who
+                        frequent committers are. For example consider
+                        <a href="https://github.com/apache/commons-lang/graphs/contributors">this github
+                            contributors page</a></li>
+                </ol>
+            </section>
+            <section>
+                <p>
+                    <img src="images/lang-committers.png" style="max-width: 600px;"/>
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>How to ask people what to work on?</h2>
+                <ol>
+                    <li class="fragment">Find emails or mailing lists.</li>
                     <ul>
-                        <li class="fragment">Remove heavier text processing mechanics from <code>commons-lang</code>.</li>
-                        <li class="fragment">Ensure <code>lang</code> minimally remains all that every Java developer needs.</li>
+                        <li class="fragment">For example consider this link from the <code>[lang]</code>
+                            <a href="https://github.com/apache/commons-lang/blob/master/README.md">README.md</a>:
+                            <a href="https://commons.apache.org/mail-lists.html">user mailing list</a>.
+                        </li>
+                    </ul>
+                    <li class="fragment">Email someone directly.</li>
+                </ol>
+            </section>
+            <section>
+                <p>
+                    <img src="images/mail-lists.png" style="max-width: 800px;"/>
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <h2>How do I figure out what to work on?</h2>
+            <ul>
+                <li class="fragment">Tests, tests, and more tests.</li>
+                <ul>
+                    <li class="fragment">No one has 100% coverage, there's always room for test improvements.</li>
+                </ul>
+                <li class="fragment">Find a ticket. My first major contribution other than tests was
+                    <a href="https://issues.apache.org/jira/browse/LANG-1252">LANG-1252</a>.
+                    <ul>
+                        <li class="fragment">After 4 months of writing tests.</li>
                     </ul>
                 </li>
             </ul>
         </section>
-        
-        <section>
-            <h3>History</h3>
-            <ul>
-                <li class="fragment">
-                    Traction on appetite for a 
-                    <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a> began to form
-                    in October 2014 in <a href="https://issues.apache.org/jira/browse/LANG-591">LANG-591</a>.
-                </li>
-                <li class="fragment">
-                    <a href="http://kinoshita.eti.br/">Bruno Kinoshita</a> and <a href="http://www.benediktritter.de/">Benedikt Ritter</a>
-                    put together a proposal to create <code>text</code> in the sandbox.
-                </li>
-                <li class="fragment">
-                    Last November, I picked up <code>text</code> where they left off, and by March 11, 2017
-                    we had our 1.0.
-                </li>
-            </ul>
-        </section>
 
         <section>
-            <h3>Current Layout.</h3>
-            <ul>
-                <li class="fragment">Textier utilities than <code>lang</code>'s <code>StringUtils</code>:</li>
-                <ul class="fragment">
-                    <li><code>StrBuilder</code>, <code>FormattableUtils</code>, <code>StrSubstitutor</code>, and
-                        <code>StrTokenizer</code></li>
+            <section>
+                <h2>Becoming familiar with the community</h2>
+                <ul>
+                    <li class="fragment">Read the documentation on all project aspects.</li>
+                    <li class="fragment">
+                        Don't be afraid to weigh in on mailing list discussions, but do be polite
+                        <ul>
+                            <li class="fragment">Try to stick to +/- 0 votes</li>
+                        </ul>
+                    </li>
                 </ul>
-                <li class="fragment">Diff utilities</li>
-                <li class="fragment">String similarity and edit distance.</li>
-                <li class="fragment">String translation and escaping (e.g. XML, CSV, JSON, ect.)</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>From <code style="text-transform: none;">lang</code></h2>
-        </section>
-
-        <section>
-            <h3><code style="text-transform: none;">StrBuilder</code></h3>
-            <ul>
-                <li class="fragment">An alternative to <code>java.lang.StringBuilder</code></li>
-                <li class="fragment">Better instance methods</li>
-                <li class="fragment">Not thread safe, not final</li>
-            </ul>
-            <pre class="fragment"><code class="java">StrBuilder sb = new StrBuilder("Test");
-sb.readFrom(CharBuffer.wrap(" 123")); // "Test 123"
-sb = new StrBuilder("bb");
-sb.replaceAll("b", "xbx"); // "xbxxbx"
-sb = new StrBuilder("abc");
-sb.replace(0, 1, "aaa"); // "aaabc"
-</code></pre>
-        </section>
-
-        <section>
-            <h3><code style="text-transform: none;">FormattableUtils</code></h3>
-            <ul>
-                <li class="fragment">Provides basic control over formatting when using a
-                    <code>java.util.Formatter</code></li>
-                <li class="fragment">Primarily concerned with numeric precision and padding</li>
-                <li class="fragment">No generalized alternative forms</li>
-            </ul>
-            <pre class="fragment"><code class="java">FormattableUtils.append("foo",
-                        new Formatter(),
-                        FormattableFlags.LEFT_JUSTIFY,
-                        6, -1, '*').toString(); // "foo***"
-FormattableUtils.append("foo",
-                        new Formatter(),
-                        FormattableFlags.LEFT_JUSTIFY,
-                        6, -1).toString(); // "foo   "</code></pre>
-        </section>
-
-        <section>
-            <h3><code style="text-transform: none;">StrSubstitutor</code></h3>
-            <ul>
-                <li class="fragment">Provides a convenient way to do string substitutions</li>
-                <li class="fragment">Think of it as a template engine in one class</li>
-            </ul>
-            <pre class="fragment"><code class="java">Map valuesMap = HashMap();
-valuesMap.put("animal", "quick brown fox");
-valuesMap.put("target", "lazy dog");
-String templateString = "The ${animal} jumped " +
-                        "over the ${target}.";
-StrSubstitutor sub = new StrSubstitutor(valuesMap);
-String resolvedString = sub.replace(templateString);
-// "The quick brown fox jumped over the lazy dog."
-</code></pre>
-        </section>
-
-        <section>
-            <h3><code style="text-transform: none;">StrTokenizer</code></h3>
-            <ul>
-                <li class="fragment">Tokenizes a string based based on delimiters (separators) and supporting quoting
-                    and ignored character concepts
-                </li>
-                <li class="fragment">Aims to do a similar job to <code>java.util.StringTokenizer</code></li>
-                <li class="fragment">Offers much more control and flexibility including implementing the
-                    <code>java.util.ListIterator</code> interface
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h3><code style="text-transform: none;">StrTokenizer</code></h3>
-            <pre><code class="java">final String input = "a;b;c;\"d;e\";f; ; ;  ";
-final StrTokenizer tok = new StrTokenizer(input);
-tok.setDelimiterChar(';');
-tok.setQuoteChar('"');
-//Matches the String trim() whitespace characters.
-tok.setIgnoredMatcher(StrMatcher.trimMatcher());
-tok.setIgnoreEmptyTokens(false);
-final String tokens[] = tok.getTokenArray();
-// String[]{"a", "b", "c", "d;e", "f", "", "", ""};</code></pre>
-        </section>
-
-        <section>
-            <h3><code style="text-transform: none;">StringEscapeUtils</code></h3>
-            <ul>
-                <li class="fragment">Provides a convenient way to do escaping</li>
-            </ul>
-            <pre class="fragment"><code class="java">StringEscapeUtils.escapeJson("He didn't say, \"stop!\"");
-// "He didn\\'t say, \\\"stop!\\\""
-StringEscapeUtils.escapeJava("\\\b\t\r");
-// "\\\\\\b\\t\\r" </code></pre>
-        </section>
-        
-        <section>
-            <h2>New functionality, unique to <code style="text-transform: none;">text</code></h2>
-        </section>
-
-        <section>
-            <h3><code style="text-transform: none;">LongestCommonSubsequence</code></h3>
-            <p>The Longest commons subsequence is a classical String similarity algorithm.</p>
-            <pre><code class="java">LongestCommonSubsequence siml =
-        new LongestCommonsSubsequence();
-siml.apply("abba","abab"); // 3
-siml.apply("frog", "fog"); // 3
-siml.apply("PENNSYLVANIA", "PENNCISYLVNIA"); // 11
-smil.apply("elephant", "hippo"); // 1</code></pre>
-        </section>
-
-        <section>
-            <h3><code style="text-transform: none; font-size:90%;">LongestCommonSubsequenceDistance</code></h3>
-            <pre><code class="java">LongestCommonSubsequenceDistance dist =
-        new LongestCommonSubsequenceDistance();
-dist.apply("abba","abab"); // 2
-dist.apply("frog", "fog"); // 1
-dist.apply("PENNSYLVANIA", "PENNCISYLVNIA"); // 3
-dist.apply("elephant", "hippo"); // 11</code></pre>
-        </section>
-
-        <section>
-            <h3><code style="text-transform: none;">LevenshteinDistance</code></h3>
-            <p>Different algorithm with almost the same results.</p>
-            <pre><code class="java">LevenshteinDistance dist = new LevenshteinDistance();
-dist.apply("abba","abab"); // 2
-dist.apply("frog", "fog"); // 1
-dist.apply("PENNSYLVANIA", "PENNCISYLVNIA"); // 3
-dist.apply("elephant", "hippo"); // 7</code></pre>
-        </section>
-
-        <section>
-            <h3>What else is there?</h3>
-            <ul>
-                <li class="fragment"><code>org.apache.commons.text.diff</code> contains the a variety of diff tools.</li>
-                <li class="fragment"><code>org.apache.commons.text.similarity</code> contains various other similarity/distance tools</li>
-                <ul class="fragment">
-                    <li>Cosine similarity and distance, Hamming distance, Jaccard distance, and Jaro-winkler.</li>
+            </section>
+            <section>
+                <h2>On voting.</h2>
+                <ul>
+                    <li class="fragment"><strong>+1</strong> - Yes.</li>
+                    <li class="fragment"><strong>+0</strong> - I'm ok with this, but I think it has issues.</li>
+                    <li class="fragment"><strong>-0</strong> - I'm ok with this, but I'd like to express a dissenting
+                        opinion because I see potentially veto-worthy issues.
+                    </li>
+                    <li class="fragment">
+                        <string>-1</string>
+                        - Veto.
+                    </li>
                 </ul>
-                <li class="fragment"><code>org.apache.commons.text.translate</code> mainly supports <code>StringEscapeUtils</code>, but has more...</li>
-            </ul>
+                <p class="fragment">
+                    This is used to gauge consensus, not really "majority rule." In fact with releases,
+                    generally, any -1 vote cancels the release.
+                </p>
+            </section>
         </section>
 
         <section>
-            <h3>What's next?</h3>
+            <h2>Regarding privileges (commit, voting, establishing votes, ect.)</h2>
+            <section>
+                <p class="fragment">
+                    Clearly this is all community dependent, but commons (and Apache generally) has the following:
+                </p>
+                <ul>
+                    <li class="fragment"><strong>user</strong> - anyone consuming the software.</li>
+                    <li class="fragment"><strong>contributor</strong> - anyone who has made a contribution.</li>
+                    <li class="fragment">
+                        <strong>committer</strong> - anyone who can commit directly
+                        <ul>
+                            <li class="fragment">Can make any changes to site or component.</li>
+                            <li class="fragment">Can present votes.</li>
+                            <li class="fragment">Can perform releases (according to the process).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li class="fragment"><strong>committee member</strong> - has voting privileges
+                        <ul>
+                            <li class="fragment">Voting privileges particularly matter with releases, new components,
+                                and such.
+                            </li>
+                            <li class="fragment">Proposing new committers.</li>
+                        </ul>
+                    </li>
+                    <li class="fragment"><strong>committee chair</strong> - prepares the quarterly reports......ugh.</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h2>After I got commit rights.</h2>
             <ul>
-                <li class="fragment">Release 1.1 in the next month or so? Assuming no 1.0.1......</li>
-                <li class="fragment"><code>WordUtils</code> from <code>lang</code>, with some updates.</li>
-                <li class="fragment"><code>RandomStringGenerator</code> thanks to the <code>rng</code> crew.</li>
-                <li class="fragment"><code>@Deprecated</code> on code taken from <code>lang</code></li>
+                <li class="fragment">Asked Benedikt, and Gary what they thought I should do.</li>
+                <li class="fragment"><code>[text]</code>, a sandbox component, needed to be taken out.</li>
+                <li class="fragment">Read up on release process:
+                    <a href="http://commons.apache.org/releases/index.html">Releasing Components</a>.
+                    <ul>
+                        <li class="fragment">Beta release.</li>
+                        <li class="fragment">Two dot releases.</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2>Questions?</h2>
+            <h2>Other activities.</h2>
+            <ul>
+                <li class="fragment">Spoke on <code>[text]</code> at ApacheCon:
+                    <a href="https://www.youtube.com/watch?v=rqBJHpQ5yvo">video of presentation.</a></li>
+                <li class="fragment">Helped release <code>[fileupload]</code> for security fixes.</li>
+                <li class="fragment">Helped to validate releases (non-binding).</li>
+                <li class="fragment">Voted into PMC in June 2017.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>Questions?</h1>
+            <h4 class="fragment">Appetite for exploring commons?</h4>
         </section>
     </div>
 </div>
