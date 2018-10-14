@@ -8,8 +8,8 @@ Getting started with OSS.
                 <small>Created by
                     <a href="https://github.com/chtompki">
                         Rob Tompkins (chtompki)</a></small><br/>
-                <small>Presentation Address: <a href="someting">
-                    something</a></small>
+                <small>Presentation Address: <a href="https://chtompki.github.io/getting-started-with-oss/#/">
+                    https://chtompki.github.io/getting-started-with-oss/#/</a></small>
             </p>
 
         </section>
